@@ -98,13 +98,21 @@ You are given a year, determine if it’s a leap year. A leap year is a year con
 The above rule is valid except that every 100 years special rules apply. Years that are divisible by 100 are not leap years if they are not also divisible by 400. For example 1900 was not a leap year, but 2000 was. Print `"Leap year!"` or `"Not a leap year!"` depending on the year you are provided.
 
 ```swift
+
 let year = 2014
 
-// let year = 2014 
-if year % 100 == 0 && year % 400 == 0 {
-print("Leap Year") } else {
-print("Not a leap year")}
-}
+// let year = 2014
+
+if year % 400 == 0 {
+print("leap year")
+
+} else if year % 100 == 0{
+print("not a leap year")
+
+} else if year % 4 == 0 {
+print("leap year")
+} else {
+print ("not a leap year")
 ```
 
 ***
@@ -135,6 +143,7 @@ var b = 6
 var c = 3
 var d = 4
 
-// var arr = [a, b , c, d]```
+var arr = [a, b , c, d]
 
-***
+var lowestNum = arr.min()
+print(lowestNum ?? 0)
